@@ -2,7 +2,7 @@
 
 import Quick
 import Nimble
-import akara-ios
+import akara_ios
 
 class TableOfContentsSpec: QuickSpec {
     override func spec() {
