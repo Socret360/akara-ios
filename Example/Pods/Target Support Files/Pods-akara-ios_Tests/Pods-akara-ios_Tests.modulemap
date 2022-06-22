@@ -1,0 +1,6 @@
+framework module Pods_akara_ios_Tests {
+  umbrella header "Pods-akara-ios_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
