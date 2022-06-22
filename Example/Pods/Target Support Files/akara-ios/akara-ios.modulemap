@@ -1,6 +1,0 @@
-framework module akara_ios {
-  umbrella header "akara-ios-umbrella.h"
-
-  export *
-  module * { export * }
-}
