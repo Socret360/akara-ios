@@ -27,9 +27,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'akara-ios/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'akara-ios' => ['akara-ios/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'akara-ios' => ['akara-ios/Assets/*']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
