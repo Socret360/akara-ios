@@ -14,20 +14,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        spellChecking()
-    }
-    
-    private func spellChecking() {
-        let akara = Akara(akaraLanguage: .khmer)
-        do {
-            try akara.getWordCorrections(word: "ខ្មែរ") { corrections in
-                print("[!] suggestions: \(corrections)")
-            }
-        }catch {
-            if let error = error as? AkaraError {
-                print("[x] \(error.localizedDescription)")
-            }
-        }
     }
 }
 

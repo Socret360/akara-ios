@@ -12,17 +12,17 @@ protocol SpellCheckable {
     /// Checker's name/identifier
     var name: String { get }
     
-    /// The name of the xml model
+    /// The name of the xml model; Specifying the `modelName` correct to ensure `loadModel` will be able to load the model correctly.
     var modelName: String { get }
     
     // The root node loaded from xml model file
     var root: BKNode? { set get }
     
-    /// Load xml model file from specified modelName
+    /// Load xml model file from specified `modelName`
     func loadModel() -> BKNode?
     
     /// Returns an array of correctly suggestion strings
-    func corrections(word: String, completion: @escaping ((_ corrections: [String]) -> Void))
+    func corrections(word: String) -> [String]
 }
 
 extension SpellCheckable {
@@ -42,41 +42,29 @@ extension SpellCheckable {
         }
     }
     
-    func corrections(word: String, completion: @escaping ((_ corrections: [String]) -> Void)){
+    func corrections(word: String) -> [String] {
         var matches: [String] = []
-        guard let root = root else {
-            DispatchQueue.main.async {
-                completion(matches)
-            }
-            return
-        }
+        guard let root = root else { return matches }
         var stack: [BKNode] = [root]
         let N = 2  // threshold
         
-        DispatchQueue.global(qos: .background).async {
-            while !stack.isEmpty {
-                guard let currentNode = stack.popLast() else {
-                    DispatchQueue.main.async {
-                        completion(matches)
-                    }
-                    return
-                }
-                if currentNode.word.distance(to: word) > N {
-                    if let children = currentNode.children?.nodes, children.count > 0 {
-                        children.forEach({
-                            if currentNode.word.distance(to: word) - N <= $0.weightInt && $0.weightInt <= currentNode.word.distance(to: word) + N {
-                                stack.append($0)
-                            }
-                        })
-                    }
-                }else {
-                    matches.append(currentNode.word)
-                }
+        while !stack.isEmpty {
+            guard let currentNode = stack.popLast() else {
+                return matches
             }
-            
-            DispatchQueue.main.async {
-                completion(matches)
+            if currentNode.word.distance(to: word) > N {
+                if let children = currentNode.children?.nodes, children.count > 0 {
+                    children.forEach({
+                        if currentNode.word.distance(to: word) - N <= $0.weightInt && $0.weightInt <= currentNode.word.distance(to: word) + N {
+                            stack.append($0)
+                        }
+                    })
+                }
+            }else {
+                matches.append(currentNode.word)
             }
         }
+        
+        return matches
     }
 }

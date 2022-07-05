@@ -38,7 +38,7 @@ extension String {
                 
                 print("leftItem: \(leftItem), topItem: \(topItem), topLeftItem: \(topLeftItem), min: \(min)")
                 
-                if word1.character(at: columnIndex - 1) != word2.character(at: rowIndex - 1) {
+                if word1.character(at: columnIndex - 1).uniCharString != word2.character(at: rowIndex - 1).uniCharString {
                     matrix[columnIndex][rowIndex] = min + 1
                 }else {
                     matrix[columnIndex][rowIndex] = topLeftItem

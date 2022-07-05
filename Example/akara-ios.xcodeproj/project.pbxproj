@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10261E8431B7783A948109D6 /* libPods-akara-ios_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA679EA909985E564B859D6 /* libPods-akara-ios_Example.a */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		82E141F1EA47EB6F924B9B01 /* Pods_akara_ios_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D4A8EFF59AA6BD03805E28D /* Pods_akara_ios_Example.framework */; };
-		F491C87A11518BD6AFBD5A89 /* Pods_akara_ios_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D01CE277AE44AE6A54FFE789 /* Pods_akara_ios_Tests.framework */; };
+		714BD750EE8556FD955B3DE9 /* libPods-akara-ios_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B1EFFA37C0522768BFF7721 /* libPods-akara-ios_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		14DF7FC8E62B57D8E4494204 /* Pods-akara-ios_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-akara-ios_Tests.release.xcconfig"; path = "Target Support Files/Pods-akara-ios_Tests/Pods-akara-ios_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		1B1EFFA37C0522768BFF7721 /* libPods-akara-ios_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-akara-ios_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5152642F5FFAAC40D0A5B6E1 /* akara-ios.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = "akara-ios.podspec"; path = "../akara-ios.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		51FF3A4425DF579128966E0B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		59963093D1F92860E1265FA5 /* Pods-akara-ios_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-akara-ios_Example.debug.xcconfig"; path = "Target Support Files/Pods-akara-ios_Example/Pods-akara-ios_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -43,9 +44,8 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		68E3DD84576C3F9CC9C1567B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		6D4A8EFF59AA6BD03805E28D /* Pods_akara_ios_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_akara_ios_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		732F2BB3CE854854E14FF2C4 /* Pods-akara-ios_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-akara-ios_Tests.debug.xcconfig"; path = "Target Support Files/Pods-akara-ios_Tests/Pods-akara-ios_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D01CE277AE44AE6A54FFE789 /* Pods_akara_ios_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_akara_ios_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA679EA909985E564B859D6 /* libPods-akara-ios_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-akara-ios_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E19951136655572162F91C2B /* Pods-akara-ios_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-akara-ios_Example.release.xcconfig"; path = "Target Support Files/Pods-akara-ios_Example/Pods-akara-ios_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82E141F1EA47EB6F924B9B01 /* Pods_akara_ios_Example.framework in Frameworks */,
+				10261E8431B7783A948109D6 /* libPods-akara-ios_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F491C87A11518BD6AFBD5A89 /* Pods_akara_ios_Tests.framework in Frameworks */,
+				714BD750EE8556FD955B3DE9 /* libPods-akara-ios_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +142,8 @@
 		DE0DDB5F70911E7BA134C5EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6D4A8EFF59AA6BD03805E28D /* Pods_akara_ios_Example.framework */,
-				D01CE277AE44AE6A54FFE789 /* Pods_akara_ios_Tests.framework */,
+				9BA679EA909985E564B859D6 /* libPods-akara-ios_Example.a */,
+				1B1EFFA37C0522768BFF7721 /* libPods-akara-ios_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				6453ED012BC4C288E2D238C6 /* [CP] Embed Pods Frameworks */,
+				E569E427D4CB462F1F7858EB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -189,7 +189,6 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				57DD0128405C978829DCD5AE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5R57397A96;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 5R57397A96;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -285,46 +286,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		57DD0128405C978829DCD5AE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-akara-ios_Tests/Pods-akara-ios_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-akara-ios_Tests/Pods-akara-ios_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6453ED012BC4C288E2D238C6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-akara-ios_Example/Pods-akara-ios_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/XMLCoder/XMLCoder.framework",
-				"${BUILT_PRODUCTS_DIR}/akara-ios/akara_ios.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMLCoder.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/akara_ios.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-akara-ios_Example/Pods-akara-ios_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B48770A3BAFCD0BFC29EE98B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,6 +306,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E569E427D4CB462F1F7858EB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-akara-ios_Example/Pods-akara-ios_Example-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/akara-ios/akara-ios.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/akara-ios.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-akara-ios_Example/Pods-akara-ios_Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -501,6 +480,7 @@
 			baseConfigurationReference = 59963093D1F92860E1265FA5 /* Pods-akara-ios_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5R57397A96;
 				INFOPLIST_FILE = "akara-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -517,6 +497,7 @@
 			baseConfigurationReference = E19951136655572162F91C2B /* Pods-akara-ios_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5R57397A96;
 				INFOPLIST_FILE = "akara-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -532,6 +513,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 732F2BB3CE854854E14FF2C4 /* Pods-akara-ios_Tests.debug.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = 5R57397A96;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -554,6 +537,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14DF7FC8E62B57D8E4494204 /* Pods-akara-ios_Tests.release.xcconfig */;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = 5R57397A96;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
