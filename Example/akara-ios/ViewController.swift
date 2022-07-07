@@ -16,11 +16,22 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let akara = Akara(akaraLanguage: .khmer)
         
-//        akara.getSequences(sentence: "ខ្ញុំគឺ ជាខ្មែរ") { sequences in
-//            sequences.enumerated().forEach {
-//                print("[] index: \($0), text: \($1.text), language: \($1.language.rawValue)")
-//            }
-//        }
+        DispatchQueue.global(qos: .background).async {
+            do {
+                let corrections = try akara
+                    .getWordCorrections(word: .init(text: "complition", language: .english))
+                    .map { "\($0.language) : \($0.text)" }
+                
+                DispatchQueue.main.async {
+                    corrections.forEach {
+                        print($0)
+                    }
+                }
+                
+            } catch {
+                print("[x] \(error.localizedDescription)")
+            }
+        }
     }
 }
 

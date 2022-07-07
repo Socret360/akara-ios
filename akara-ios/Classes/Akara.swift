@@ -11,11 +11,11 @@ final public class Akara {
     private var language: AkaraLanguage!
     private lazy var languageId = LanguageIdentification.languageIdentification()
     
-    private lazy var khmerSpellChecker = KhmerSpellChecker()
-    private lazy var englishSpellChecker = EnglishSpellChecker()
+    private var khmerSpellChecker = KhmerSpellChecker()
+    private var englishSpellChecker = EnglishSpellChecker()
     
-    private lazy var khmerWordBreaker = KhmerWordBreaker()
-    private lazy var englishWordBreaker = EnglishWordBreaker()
+    private var khmerWordBreaker = KhmerWordBreaker()
+    private var englishWordBreaker = EnglishWordBreaker()
     
     public init(akaraLanguage: AkaraLanguage) {
         self.language = akaraLanguage
@@ -85,10 +85,6 @@ final public class Akara {
         } else {
             return khmerSpellChecker.corrections(word: word.text).map { Word(text: $0, language: word.language) }
         }
-    }
-    
-    public func getSpellCheck(word: String) -> [String] {
-        return khmerSpellChecker.corrections(word: word)
     }
     
     // MARK: Using autocompletion function to check if target word is correct
