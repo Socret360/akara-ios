@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let akara = Akara(akaraLanguage: .khmer)
+        
+//        akara.getSequences(sentence: "ខ្ញុំគឺ ជាខ្មែរ") { sequences in
+//            sequences.enumerated().forEach {
+//                print("[] index: \($0), text: \($1.text), language: \($1.language.rawValue)")
+//            }
+//        }
     }
 }
 

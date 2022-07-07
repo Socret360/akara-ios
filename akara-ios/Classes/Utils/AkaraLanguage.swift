@@ -8,8 +8,8 @@
 import Foundation
 
 public enum AkaraLanguage: String, Equatable {
-    case english
-    case khmer
+    case english = "en"
+    case khmer = "km"
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.rawValue == rhs.rawValue
