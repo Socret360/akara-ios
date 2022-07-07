@@ -16,11 +16,11 @@ public struct BKRoot: Codable, DynamicNodeEncoding {
 }
 
 public struct BKNode: Codable, DynamicNodeEncoding {
-    public let word: String
+    public let word: String?
     public let weight: String
     public let children: BKChildren?
     
-    public var weightInt: Int {
+    public var weightInt: Int? {
         return Int(weight) ?? 0
     }
     

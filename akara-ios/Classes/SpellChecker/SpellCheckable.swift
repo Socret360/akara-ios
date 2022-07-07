@@ -52,16 +52,16 @@ extension SpellCheckable {
             guard let currentNode = stack.popLast() else {
                 return matches
             }
-            if currentNode.word.distance(to: word) > N {
+            if (currentNode.word ?? "").distance(to: word) > N {
                 if let children = currentNode.children?.nodes, children.count > 0 {
                     children.forEach({
-                        if currentNode.word.distance(to: word) - N <= $0.weightInt && $0.weightInt <= currentNode.word.distance(to: word) + N {
+                        if (currentNode.word ?? "").distance(to: word) - N <= $0.weightInt ?? 0 && $0.weightInt ?? 0 <= (currentNode.word ?? "").distance(to: word) + N {
                             stack.append($0)
                         }
                     })
                 }
             }else {
-                matches.append(currentNode.word)
+                matches.append(currentNode.word ?? "")
             }
         }
         

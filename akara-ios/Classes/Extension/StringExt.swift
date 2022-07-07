@@ -36,7 +36,7 @@ extension String {
                 let topLeftItem = matrix[columnIndex - 1][rowIndex - 1]
                 let min = Swift.min(leftItem, topItem, topLeftItem)
                 
-                print("leftItem: \(leftItem), topItem: \(topItem), topLeftItem: \(topLeftItem), min: \(min)")
+//                print("leftItem: \(leftItem), topItem: \(topItem), topLeftItem: \(topLeftItem), min: \(min)")
                 
                 if word1.character(at: columnIndex - 1).uniCharString != word2.character(at: rowIndex - 1).uniCharString {
                     matrix[columnIndex][rowIndex] = min + 1
@@ -48,9 +48,9 @@ extension String {
             }
         }
         
-        print("[] columnCount: \(columnCount)")
-        print("[] rowCount: \(rowCount)")
-        print("[] matrix:\n\n \(matrix)")
+//        print("[] columnCount: \(columnCount)")
+//        print("[] rowCount: \(rowCount)")
+//        print("[] matrix:\n\n \(matrix)")
         
         return matrix[columnCount - 1][rowCount - 1]
     }

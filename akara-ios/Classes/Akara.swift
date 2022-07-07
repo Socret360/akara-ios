@@ -9,16 +9,13 @@ import MLKitLanguageID
 
 final public class Akara {
     private var language: AkaraLanguage!
-    
     private lazy var languageId = LanguageIdentification.languageIdentification()
     
-    private var spellChecker: SpellCheckable {
-        return language.spellChecker
-    }
+    private lazy var khmerSpellChecker = KhmerSpellChecker()
+    private lazy var englishSpellChecker = EnglishSpellChecker()
     
-    private var wordBreaker: WordBreakable {
-        return language.wordBreaker
-    }
+    private lazy var khmerWordBreaker = KhmerWordBreaker()
+    private lazy var englishWordBreaker = EnglishWordBreaker()
     
     public init(akaraLanguage: AkaraLanguage) {
         self.language = akaraLanguage
@@ -42,10 +39,6 @@ final public class Akara {
                 completion(nil, .unknownLanguage)
             }
         }
-    }
-    
-    public func getSequences(sentence: String) -> Sequences {
-        return []
     }
     
     public func getSequences(sentence: String, completion: @escaping ((Sequences) -> Void)) {
@@ -87,7 +80,15 @@ final public class Akara {
     
     public func getWordCorrections (word: Word) throws -> Words {
         guard !word.text.isEmpty else { throw AkaraError.emptyTargetString }
-        return spellChecker.corrections(word: word.text).map { Word(text: $0, language: word.language) }
+        if word.language == .english {
+            return englishSpellChecker.corrections(word: word.text).map { Word(text: $0, language: word.language) }
+        } else {
+            return khmerSpellChecker.corrections(word: word.text).map { Word(text: $0, language: word.language) }
+        }
+    }
+    
+    public func getSpellCheck(word: String) -> [String] {
+        return khmerSpellChecker.corrections(word: word)
     }
     
     // MARK: Using autocompletion function to check if target word is correct
@@ -100,7 +101,12 @@ final public class Akara {
         var words: Words = []
         sequences.forEach { sequence in
             let text = sequence.text.filter({ !$0.isNumber })
-            let splittedWords = sequence.language.wordBreaker.split(sentence: text).map { word in Word(text: word, language: sequence.language) }
+            var splittedWords: Words = []
+            if sequence.language == .english {
+                splittedWords = englishWordBreaker.split(sentence: text).map { word in Word(text: word, language: sequence.language) }
+            }else {
+                splittedWords = khmerWordBreaker.split(sentence: text).map { word in Word(text: word, language: sequence.language) }
+            }
             guard splittedWords.count > 0 else { return }
             words.append(contentsOf: splittedWords)
         }
