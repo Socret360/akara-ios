@@ -55,3 +55,19 @@ extension String {
         return matrix[columnCount - 1][rowCount - 1]
     }
 }
+
+extension String.UnicodeScalarView {
+    func padLeft(repeating element: String, inLength length: Int) -> String {
+        guard self.count < length else { return String(self) }
+        
+        let paddingCount = length - self.count
+        var result = ""
+        for _ in 0..<paddingCount {
+            result = result + element
+        }
+        return result + String(self)
+    }
+    
+    
+}
+

@@ -10,6 +10,7 @@ import Foundation
 public enum AkaraLanguage: String, Equatable {
     case english = "en"
     case khmer = "km"
+    case other = "other"
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.rawValue == rhs.rawValue

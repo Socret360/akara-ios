@@ -212,12 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 5R57397A96;
+						DevelopmentTeam = M5L24NR2XT;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 5R57397A96;
+						DevelopmentTeam = M5L24NR2XT;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -480,7 +480,7 @@
 			baseConfigurationReference = 59963093D1F92860E1265FA5 /* Pods-akara-ios_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5R57397A96;
+				DEVELOPMENT_TEAM = M5L24NR2XT;
 				INFOPLIST_FILE = "akara-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -497,7 +497,7 @@
 			baseConfigurationReference = E19951136655572162F91C2B /* Pods-akara-ios_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5R57397A96;
+				DEVELOPMENT_TEAM = M5L24NR2XT;
 				INFOPLIST_FILE = "akara-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -514,7 +514,7 @@
 			baseConfigurationReference = 732F2BB3CE854854E14FF2C4 /* Pods-akara-ios_Tests.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				DEVELOPMENT_TEAM = 5R57397A96;
+				DEVELOPMENT_TEAM = M5L24NR2XT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -538,7 +538,7 @@
 			baseConfigurationReference = 14DF7FC8E62B57D8E4494204 /* Pods-akara-ios_Tests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				DEVELOPMENT_TEAM = 5R57397A96;
+				DEVELOPMENT_TEAM = M5L24NR2XT;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
