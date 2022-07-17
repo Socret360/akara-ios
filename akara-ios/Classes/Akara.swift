@@ -130,18 +130,12 @@ public class Akara {
         return sequences
     }
     
-    
     private func getWordCorrections (_ word: Word) -> [String] {
         if word.language == .english {
             return englishSpellChecker.corrections(word: word.text)
         } else {
             return khmerSpellChecker.corrections(word: word.text)
         }
-    }
-    
-    // MARK: Using autocompletion function to check if target word is correct
-    private func isWordCorrect(word: String) -> Bool {
-        return false
     }
     
     // MARK: Using wordbreaker function to check if target word is correct
@@ -184,6 +178,7 @@ public class Akara {
         return khmerAutoComplete.predict(words.last!.text)
     }
     
+    // MARK: Using autocompletion function to check if target word is correct
     private func isWordCorrect(_ word: Word) -> Bool {
         if (word.language == .khmer) {
             return khmerAutoComplete.isCorrect(word.text)
