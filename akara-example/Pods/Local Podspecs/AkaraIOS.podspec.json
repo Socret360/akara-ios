@@ -25,10 +25,10 @@
   },
   "dependencies": {
     "TensorFlowLiteSwift": [
-
+      "2.7.0"
     ],
     "GoogleMLKit/LanguageID": [
-
+      "3.1.0"
     ],
     "XMLCoder": [
       "~> 0.13.1"

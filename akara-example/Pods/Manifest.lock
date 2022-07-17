@@ -1,7 +1,7 @@
 PODS:
   - AkaraIOS (0.0.1):
-    - GoogleMLKit/LanguageID
-    - TensorFlowLiteSwift
+    - GoogleMLKit/LanguageID (= 3.1.0)
+    - TensorFlowLiteSwift (= 2.7.0)
     - XMLCoder (~> 0.13.1)
   - GoogleDataTransport (9.1.2):
     - GoogleUtilities/Environment (~> 7.2)
@@ -96,7 +96,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AkaraIOS: 422be9a81809228e2471b765fc733c94e46d6a21
+  AkaraIOS: 27e70461f68f1e47e4cd57a35a1d4f631ab28f2c
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleMLKit: 9d072522949ff0ef4dae5359feaf3db2ef2fa658
   GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34
@@ -113,6 +113,6 @@ SPEC CHECKSUMS:
   TensorFlowLiteSwift: fe99748dc3d58ae08bd2ff38658e3ade7038670f
   XMLCoder: bd962586bc6777a9e6a17bc84d97a3c5413a9495
 
-PODFILE CHECKSUM: 8410831bc970f52acb9f56a2734c307eed7e958f
+PODFILE CHECKSUM: 6299f94e681bff56bb6af3c6cdc56c9ec67fb0c6
 
 COCOAPODS: 1.11.2

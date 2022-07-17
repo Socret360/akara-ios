@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.resource_bundles = {
     'AkaraIOS' => ['akara-ios/Assets/**/*']
   }
-  s.dependency 'TensorFlowLiteSwift'
-  s.dependency 'GoogleMLKit/LanguageID'
+  s.dependency 'TensorFlowLiteSwift', '2.7.0'
+  s.dependency 'GoogleMLKit/LanguageID', '3.1.0'
   s.dependency 'XMLCoder', '~> 0.13.1'
 end
