@@ -36,8 +36,11 @@ AkaraIOS is available through [CocoaPods](https://cocoapods.org). To integrate
 AkaraIOS into your project, simply add the following line to your Podfile:
 
 ```ruby
+# use_frameworks!
 pod 'AkaraIOS'
 ```
+
+Note: Comment out `use_frameworks!` before hitting `pod install` as parts of AkaraIOS's implementation depends on [TensorFLowLiteSwift](https://www.tensorflow.org/lite/guide/ios) which is a static framework!
 
 ## Usage
 
