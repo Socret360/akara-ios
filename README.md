@@ -1,4 +1,4 @@
-# AkaraIOS
+# 💡 AkaraIOS: Multi-Language Word Suggestions Toolkit for iOS
 
 [![CI Status](https://img.shields.io/travis/vaifathuy/akara-ios.svg?style=flat)](https://travis-ci.org/vaifathuy/akara-ios)
 [![Version](https://img.shields.io/cocoapods/v/akara-ios.svg?style=flat)](https://cocoapods.org/pods/akara-ios)

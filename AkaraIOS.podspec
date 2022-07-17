@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.name             = 'AkaraIOS'
   s.version          = '0.0.1'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.summary          = 'Multi-language Word Suggestions Tool in Swift'
+  s.summary          = 'Multi-language Word Suggestions Tool for iOS'
   
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   
-  #  s.description      = 'Khmer Spell Checker and Word Suggestion in Swift'
+    s.description      = '💡Multi-Language Word Suggestions Toolkit for iOS'
   
   s.homepage         = 'https://github.com/Socret360/akara-ios'
   s.author           = { 'vaifathuy' => 'vaifathuy@gmail.com' }
