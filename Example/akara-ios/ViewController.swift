@@ -15,30 +15,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let akara = Akara()
-//        let input = "this is my holid"
-//        let input = "ឯងនេះមួយយប់ៗដេកខ្វល់រឿងអនាគតមិនដឹងធ្វើអីចិញ្ចឹមខ្លួនមួយនេះរស់"
-        
-        DispatchQueue.global(qos: .background).async { [self] in
-//            let sentence = "ឯងនេះមួយយប់ៗដេកខ្វល់រឿងអនាគតមិនដឹងធ្វើអីចិញ្ចឹមខ្លួនមួយនេះរស់"
+        DispatchQueue.global(qos: .background).async {
             let sentence = "ឯងនេះមួយយប់ៗដេកខ្វល់រឿងអនាគតមិនដឹងធ្វើអីចិញ្ចឹមខ្លួនមួយនេះរស់"
-            var string = sentence.map {(c) -> String in
-                return String(c)
-            }
-            var input = ""
-            var isProcessing = false
-            while (!string.isEmpty) {
-                if (!isProcessing) {
-                    isProcessing = true
-                    input += string.removeFirst()
-                    akara.suggest(sentence: input) { (suggestionType, suggestions, sequences, words) -> Void in
-                        print("input: \(input)")
-                        print("sequences: \(sequences)")
-                        print("words: \(words)")
-                        print("suggestions: \(suggestions.suffix(3))")
-                        print("suggestion_type: \(suggestionType)")
-                        print("======")
-                        isProcessing = false
-                    }
+            akara.suggest(sentence: sentence) { (suggestionType, suggestions, sequences, words) -> Void in
+                DispatchQueue.main.async {
+                    print("input: \(sentence)")
+                    print("sequences: \(sequences)")
+                    print("words: \(words)")
+                    print("suggestions: \(suggestions.suffix(3))")
+                    print("suggestionType: \(suggestionType)")
+                    print("======")
                 }
             }
         }

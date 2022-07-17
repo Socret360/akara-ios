@@ -30,39 +30,13 @@ public class Akara {
         let completions = self.getWordCompletions(words)
         
         if (completions.count > 0) {
-            completion(
-                .completion,
-                completions,
-                sequences,
-                words.map { (word) -> String in
-                    word.text
-                }
-            );
+            completion(.completion, completions, sequences, words.map { $0.text })
         } else {
             let isLastWordCorrect = self.isWordCorrect(words.last!)
-
             if (isLastWordCorrect) {
-                
-                completion(
-                    .nextWord,
-                    self.getNextWordSuggestions(words),
-                    sequences,
-                    words.map { (word) -> String in
-                        word.text
-                    }
-                );
-
+                completion(.nextWord, getNextWordSuggestions(words), sequences, words.map { $0.text })
             } else {
-                
-                completion(
-                    .correction,
-                    self.getWordCorrections(words.last!),
-                    sequences,
-                    words.map { (word) -> String in
-                        word.text
-                    }
-                );
-
+                completion(.correction, getWordCorrections(words.last!), sequences, words.map{ $0.text })
             }
         }
     }
