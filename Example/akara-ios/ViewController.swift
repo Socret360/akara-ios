@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import akara_ios
+import AkaraIOS
 
 class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!

@@ -3,7 +3,7 @@
 platform :ios, '11.0'
 
 target 'akara-ios_Example' do
-  pod 'akara-ios', :path => '../'
+  pod 'AkaraIOS', :path => '../'
 
   target 'akara-ios_Tests' do
     inherit! :search_paths

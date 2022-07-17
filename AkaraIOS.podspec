@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint akara-ios.podspec' to ensure this is a
+# Be sure to run `pod lib lint AkaraIOS.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,10 +7,10 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'akara-ios'
+  s.name             = 'AkaraIOS'
   s.version          = '0.0.1'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.summary          = 'Khmer Spell Checker and Word Suggestion in Swift'
+  s.summary          = 'Multi-language Word Suggestions Tool in Swift'
   
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -28,11 +28,8 @@ Pod::Spec.new do |s|
   s.source_files = 'akara-ios/Classes/**/*'
   
   s.resource_bundles = {
-    'akara-ios' => ['akara-ios/Assets/**/*']
+    'AkaraIOS' => ['akara-ios/Assets/**/*']
   }
-  
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'TensorFlowLiteSwift'
   s.dependency 'GoogleMLKit/LanguageID'
   s.dependency 'XMLCoder', '~> 0.13.1'
