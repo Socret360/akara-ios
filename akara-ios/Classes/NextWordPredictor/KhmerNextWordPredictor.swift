@@ -92,7 +92,7 @@ class KhmerNextWordPredictor: NextWordPredictable {
         let outputTensor = try model!.output(at: 0)
         let probabilities =
                 UnsafeMutableBufferPointer<Float32>.allocate(capacity: N_UNIQUE_CHARS * SEQUENCE_LENGTH)
-        outputTensor.data.copyBytes(to: probabilities)
+        _ = outputTensor.data.copyBytes(to: probabilities)
         let results = Array(probabilities)
         let sortedIndexes: [Int] = argsort(a: results)
         
