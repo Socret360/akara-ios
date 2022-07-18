@@ -1,9 +1,9 @@
 # 💡 AkaraIOS: Multi-Language Word Suggestions Toolkit for iOS
 
-[![CI Status](https://img.shields.io/travis/vaifathuy/akara-ios.svg?style=flat)](https://travis-ci.org/vaifathuy/akara-ios)
-[![Version](https://img.shields.io/cocoapods/v/akara-ios.svg?style=flat)](https://cocoapods.org/pods/akara-ios)
-[![License](https://img.shields.io/cocoapods/l/akara-ios.svg?style=flat)](https://cocoapods.org/pods/akara-ios)
-[![Platform](https://img.shields.io/cocoapods/p/akara-ios.svg?style=flat)](https://cocoapods.org/pods/akara-ios)
+[![Platform](https://img.shields.io/badge/platform-ios-blue)](https://cocoapods.org/pods/akaraIOS)
+[![Swift](https://img.shields.io/badge/Swift-4+-orange?style=flat)](https://img.shields.io/badge/Swift-4+-Orange?style=flat)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/AkaraIOS.svg?style=flat)](https://img.shields.io/cocoapods/v/AkaraIOS.svg)
+[![License](https://img.shields.io/github/license/Socret360/akara-ios)](https://cocoapods.org/pods/akaraIOS)
 
 The AKARA (អក្ខរា) project aims to give developers the power to easily add multi-language word suggestions support to their applications. 
 
