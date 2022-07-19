@@ -1,0 +1,6 @@
+module AkaraIOS {
+  umbrella header "AkaraIOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

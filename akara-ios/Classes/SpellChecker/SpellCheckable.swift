@@ -19,26 +19,26 @@ protocol SpellCheckable {
     var root: BKNode? { set get }
     
     /// Load xml model file from specified `modelName`
-    func loadModel() -> BKNode?
+    func loadModel() throws -> BKNode?
     
     /// Returns an array of correctly suggestion strings
     func corrections(word: String) -> [String]
 }
 
 extension SpellCheckable {
-    func loadModel() -> BKNode? {
+    func loadModel() throws -> BKNode? {
         guard !modelName.isEmpty else {
-            assertionFailure("[x] [SpellCheckable: \(name)]: modelName cannot be empty")
-            return nil
+            throw AkaraError.generic("modelName '\(modelName)'cannot be empty")
         }
-        guard let xmlPath = AkaraBundle.main.url(forResource: modelName, withExtension: "xml") else { return nil }
+        guard let xmlPath = AkaraBundle.main.url(forResource: modelName, withExtension: "xml") else {
+            throw AkaraError.unknownResource(modelName)
+        }
         do {
             let data = try Data(contentsOf: xmlPath)
             let tree = try XMLDecoder().decode(BKRoot.self, from: data)
             return tree.node
         } catch {
-            print("[x] [SpellCheckable: \(name)]: \(error.localizedDescription)")
-            return nil
+            throw AkaraError.loadModelFailure(error.localizedDescription)
         }
     }
     

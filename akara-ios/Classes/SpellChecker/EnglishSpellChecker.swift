@@ -15,8 +15,12 @@ final class EnglishSpellChecker: SpellCheckable {
     var root: BKNode?
     
     init() {
-        guard let loadedRoot = loadModel() else { return }
-        self.root = loadedRoot
-        assert(root != nil, "Root node of the \(name) cannot be nil")
+        do {
+            guard let loadedRoot = try loadModel() else { return }
+            self.root = loadedRoot
+            assert(root != nil, "Root node of the \(name) cannot be nil")
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }

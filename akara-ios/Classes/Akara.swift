@@ -30,39 +30,13 @@ public class Akara {
         let completions = self.getWordCompletions(words)
         
         if (completions.count > 0) {
-            completion(
-                .completion,
-                completions,
-                sequences,
-                words.map { (word) -> String in
-                    word.text
-                }
-            );
+            completion(.completion, completions, sequences, words.map { $0.text })
         } else {
             let isLastWordCorrect = self.isWordCorrect(words.last!)
-
             if (isLastWordCorrect) {
-                
-                completion(
-                    .nextWord,
-                    self.getNextWordSuggestions(words),
-                    sequences,
-                    words.map { (word) -> String in
-                        word.text
-                    }
-                );
-
+                completion(.nextWord, getNextWordSuggestions(words), sequences, words.map { $0.text })
             } else {
-                
-                completion(
-                    .correction,
-                    self.getWordCorrections(words.last!),
-                    sequences,
-                    words.map { (word) -> String in
-                        word.text
-                    }
-                );
-
+                completion(.correction, getWordCorrections(words.last!), sequences, words.map{ $0.text })
             }
         }
     }
@@ -130,18 +104,12 @@ public class Akara {
         return sequences
     }
     
-    
     private func getWordCorrections (_ word: Word) -> [String] {
         if word.language == .english {
             return englishSpellChecker.corrections(word: word.text)
         } else {
             return khmerSpellChecker.corrections(word: word.text)
         }
-    }
-    
-    // MARK: Using autocompletion function to check if target word is correct
-    private func isWordCorrect(word: String) -> Bool {
-        return false
     }
     
     // MARK: Using wordbreaker function to check if target word is correct
@@ -184,6 +152,7 @@ public class Akara {
         return khmerAutoComplete.predict(words.last!.text)
     }
     
+    // MARK: Using autocompletion function to check if target word is correct
     private func isWordCorrect(_ word: Word) -> Bool {
         if (word.language == .khmer) {
             return khmerAutoComplete.isCorrect(word.text)

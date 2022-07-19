@@ -63,16 +63,19 @@ final class KhmerWordBreaker: WordBreakable {
     
     // MARK: - Init
     public init() {
-        self.model = loadModel()
-        prepareCharMap()
-        preparePosMap()
+        do {
+            self.model = try loadModel()
+            try prepareCharMap()
+            try preparePosMap()
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     // MARK: - Helper methods
-    private func prepareCharMap() {
+    private func prepareCharMap() throws {
         guard let fileURL = AkaraBundle.main.url(forResource: "khmer_word_seg_char_map", withExtension: "txt") else {
-            assertionFailure("[x] [prepareCharMap: \(name)]: khmer_word_seg_char_map cannot be found in the bundle")
-            return
+            throw AkaraError.unknownResource("khmer_word_seg_char_map.txt")
         }
         
         do {
@@ -89,14 +92,13 @@ final class KhmerWordBreaker: WordBreakable {
             charToIndex["UNK"] = N_UNIQUE_CHARS - 1
             indexToChar[N_UNIQUE_CHARS - 1] = "UNK"
         } catch {
-            print("[x] [prepareCharMap: \(name)]: \(error.localizedDescription)")
+            throw AkaraError.generic(error.localizedDescription)
         }
     }
     
-    private func preparePosMap() {
+    private func preparePosMap() throws {
         guard let fileURL = AkaraBundle.main.url(forResource: "khmer_word_seg_pos_map", withExtension: "txt") else {
-            assertionFailure("[x] [preparePosMap: \(name)]: khmer_word_seg_pos_map cannot be found in the bundle")
-            return
+            throw AkaraError.unknownResource("khmer_word_seg_pos_map.txt")
         }
         
         do {
@@ -108,7 +110,7 @@ final class KhmerWordBreaker: WordBreakable {
                 indexToPos[index] = content
             }
         } catch {
-            print("[x] [preparePosMap: \(name)]: \(error.localizedDescription)")
+            throw AkaraError.generic(error.localizedDescription)
         }
     }
     

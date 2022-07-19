@@ -20,7 +20,7 @@ protocol WordBreakable {
     func split(sentence: String) -> [String]
     
     /// Returns an Interpreter by loading Tensorflow's model file from specified `modelName`
-    func loadModel() -> Interpreter?
+    func loadModel() throws -> Interpreter?
     
     /// Clear retrieved content of the model
     mutating func close()
@@ -28,18 +28,18 @@ protocol WordBreakable {
 
 extension WordBreakable {
     
-    func loadModel() -> Interpreter? {
+    func loadModel() throws -> Interpreter? {
         guard !modelName.isEmpty else {
-            assertionFailure("[x] [WordBreakable: \(name)]: modelName cannot be empty")
-            return nil
+            throw AkaraError.generic("modelName '\(name)'cannot be empty")
         }
-        guard let tfURL = AkaraBundle.main.url(forResource: modelName, withExtension: "tflite") else { return nil }
+        guard let tfURL = AkaraBundle.main.url(forResource: modelName, withExtension: "tflite") else {
+            throw AkaraError.unknownResource(modelName)
+        }
         do {
             let interpreter = try Interpreter(modelPath: tfURL.path)
             return interpreter
         } catch {
-            print("[x] [SpellCheckable: \(name)]: \(error.localizedDescription)")
-            return nil
+            throw AkaraError.loadModelFailure(error.localizedDescription)
         }
     }
 }

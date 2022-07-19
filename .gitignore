@@ -24,6 +24,6 @@ DerivedData
 Carthage/Build
 
 # Example
-Example/
 Example/akara-ios.xcworkspace
 Example/Pods
+Example/Podfile.lock
