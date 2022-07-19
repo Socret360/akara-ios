@@ -24,6 +24,8 @@ Pod::Spec.new do |s|
   s.author           = { 'vaifathuy' => 'vaifathuy@gmail.com' }
   s.source           = { :git => 'https://github.com/Socret360/akara-ios.git', :tag => s.version.to_s }
   s.ios.deployment_target = '11.0'
+  s.static_framework = true
+  s.swift_versions = '4.0'
   
   s.source_files = 'akara-ios/Classes/**/*'
   
