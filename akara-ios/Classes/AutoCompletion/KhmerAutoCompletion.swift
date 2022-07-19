@@ -18,7 +18,7 @@ class KhmerAutoCompletion: AutoCompletionable {
         self.root = TrieNode(
             char: nil,
             isEnd: false,
-            children: [TrieNode?](repeating: nil, count: self.charMap.count)
+            children: [String: TrieNode]()
         )
         
         self.loadModel()
@@ -34,16 +34,15 @@ class KhmerAutoCompletion: AutoCompletionable {
                 var currentNode = self.root
                 for charUnicode in word.unicodeScalars {
                     let char = String(charUnicode)
-                    let charIndex = self.charMap.index(of: char)!
-                    if (!currentNode.hasChar(charIndex: charIndex)) {
-                        currentNode.children[charIndex] = TrieNode(
+                    if (!currentNode.hasChar(char: char)) {
+                        currentNode.children[char] = TrieNode(
                             char: char,
                             isEnd: false,
-                            children: [TrieNode?](repeating: nil, count: self.charMap.count)
+                            children: [String: TrieNode]()
                         )
                     }
                     
-                    currentNode = currentNode.children[charIndex]!
+                    currentNode = currentNode.children[char]!
                 }
                 
                 currentNode.isEnd = true
@@ -57,9 +56,8 @@ class KhmerAutoCompletion: AutoCompletionable {
         var currNode = self.root
         for charUnicode in text.unicodeScalars {
             let char = String(charUnicode)
-            let charIndex = self.charMap.index(of: char)!
-            if (currNode.hasChar(charIndex: charIndex)) {
-                currNode = currNode.children[charIndex]!
+            if (currNode.hasChar(char: char)) {
+                currNode = currNode.children[char]!
             } else {
                 return nil
             }
@@ -74,12 +72,10 @@ class KhmerAutoCompletion: AutoCompletionable {
         }
 
         for charNode in currNode.children {
-            if (charNode != nil) {
-                getCompletionsRec(
-                    currNode: charNode!,
-                    currPrefix: currPrefix.appending(String(charNode!.char!))
-                )
-            }
+            getCompletionsRec(
+                currNode: charNode.value,
+                currPrefix: currPrefix.appending(String(charNode.value.char!))
+            )
         }
     }
 

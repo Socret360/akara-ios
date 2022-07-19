@@ -10,19 +10,19 @@ import Foundation
 class TrieNode {
     var char: String?
     var isEnd: Bool
-    public var children: [TrieNode?]
+    public var children: [String: TrieNode]
     
     public init(
         char: String?,
         isEnd: Bool,
-        children: Array<TrieNode?>
+        children: [String: TrieNode]
     ) {
         self.char = char
         self.isEnd = isEnd
         self.children = children
     }
     
-    func hasChar(charIndex: Int) -> Bool {
-        return self.children[charIndex] != nil
+    func hasChar(char: String) -> Bool {
+        return self.children[char] != nil
     }
 }
