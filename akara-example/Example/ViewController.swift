@@ -15,20 +15,29 @@ class ViewController: UIViewController {
         
         let akara = Akara()
         DispatchQueue.global(qos: .background).async {
-            let sentence = "ឯងនេះមួយយប់ៗដេកខ្វល់រឿងអនាគតមិនដឹងធ្វើអីចិញ្ចឹមខ្លួនមួយនេះរស់"
-            akara.suggest(sentence: sentence) { (suggestionType, suggestions, sequences, words) -> Void in
+//            var sentence = "ឯងនេះមួយយប់ៗដេកខ្វល់រឿងអនាគតមិនដឹងធ្វើអីចិញ្ចឹមខ្លួនមួយនេះរស់"
+            let sentence = "សើច លេង មែន"
+            akara.suggest(sentence: sentence) { (suggestionType, suggestions, wordOfInterest) -> Void in
                 DispatchQueue.main.async {
                     print("input: \(sentence)")
-                    print("sequences: \(sequences)")
-                    print("words: \(words)")
-                    print("suggestions: \(suggestions.suffix(3))")
+                    print("wordOfInterest: \(wordOfInterest?.toString())")
+                    print("suggestions: \(suggestions.prefix(3))")
                     print("suggestionType: \(suggestionType)")
+                    
+                    for w in suggestions {
+                        print("if \(w) is chosen: ")
+                        var s = String(sentence).unicodeScalars
+                        if (suggestionType != .nextWord) {
+                            var i = String(s[...s.index(s.startIndex, offsetBy: wordOfInterest!.start-1)])
+                            print("-- \(i)\(w)")
+                        } else {
+                            print("-- \(s)\(w)")
+                        }
+                    }
                     print("======")
                 }
             }
         }
     }
-
-
 }
 

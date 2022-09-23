@@ -96,7 +96,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AkaraIOS: 27e70461f68f1e47e4cd57a35a1d4f631ab28f2c
+  AkaraIOS: 1aaac824a777bd8552c911aa6d4476cccedf3bd3
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleMLKit: 9d072522949ff0ef4dae5359feaf3db2ef2fa658
   GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34

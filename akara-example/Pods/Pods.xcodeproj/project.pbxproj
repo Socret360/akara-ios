@@ -3648,31 +3648,6 @@
 			};
 			name = Release;
 		};
-		7D9AF3990CA2E90D1C9057BCA3CCBBBB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6D68EF5FCD8E572B8D08AB2E57F7F53 /* AkaraIOS.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/AkaraIOS/AkaraIOS-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/AkaraIOS/AkaraIOS.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AkaraIOS;
-				PRODUCT_NAME = AkaraIOS;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		8810CDB925BF6F33E4032405C39C7E06 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1436D734C2F7A2F966BF7C3DE61CF44C /* GoogleToolboxForMac.release.xcconfig */;
@@ -3784,32 +3759,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
-		};
-		99ACDC951B3C5C0400BE2527CAEAF65A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CA0942A5CC538579F78F00B4AA86350 /* AkaraIOS.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/AkaraIOS/AkaraIOS-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				MODULEMAP_FILE = Headers/Public/AkaraIOS/AkaraIOS.modulemap;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = AkaraIOS;
-				PRODUCT_NAME = AkaraIOS;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
 		};
 		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3955,6 +3904,31 @@
 			};
 			name = Release;
 		};
+		C13847C5157185D9E171A4644ED2B578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6D68EF5FCD8E572B8D08AB2E57F7F53 /* AkaraIOS.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AkaraIOS/AkaraIOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/AkaraIOS/AkaraIOS.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AkaraIOS;
+				PRODUCT_NAME = AkaraIOS;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		C3D1316F0443D31671F2BAB08E3B87C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D8A3FFA1BD1E1493638F2BFC3BDA601D /* GoogleUtilitiesComponents.debug.xcconfig */;
@@ -4084,6 +4058,32 @@
 					"@executable_path/Frameworks",
 				);
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E21BD57CF83C590F45B94FB5C64F76A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CA0942A5CC538579F78F00B4AA86350 /* AkaraIOS.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/AkaraIOS/AkaraIOS-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MODULEMAP_FILE = Headers/Public/AkaraIOS/AkaraIOS.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = AkaraIOS;
+				PRODUCT_NAME = AkaraIOS;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -4221,8 +4221,8 @@
 		082EEE78D449D060AB81DA28565BF42F /* Build configuration list for PBXNativeTarget "AkaraIOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D9AF3990CA2E90D1C9057BCA3CCBBBB /* Debug */,
-				99ACDC951B3C5C0400BE2527CAEAF65A /* Release */,
+				C13847C5157185D9E171A4644ED2B578 /* Debug */,
+				E21BD57CF83C590F45B94FB5C64F76A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

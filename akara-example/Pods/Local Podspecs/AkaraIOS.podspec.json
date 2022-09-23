@@ -5,7 +5,8 @@
     "type": "MIT",
     "file": "LICENSE"
   },
-  "summary": "Multi-language Word Suggestions Tool in Swift",
+  "summary": "Multi-language Word Suggestions Tool for iOS",
+  "description": "💡Multi-Language Word Suggestions Toolkit for iOS",
   "homepage": "https://github.com/Socret360/akara-ios",
   "authors": {
     "vaifathuy": "vaifathuy@gmail.com"
@@ -17,6 +18,8 @@
   "platforms": {
     "ios": "11.0"
   },
+  "static_framework": true,
+  "swift_versions": "4.0",
   "source_files": "akara-ios/Classes/**/*",
   "resource_bundles": {
     "AkaraIOS": [
@@ -33,5 +36,6 @@
     "XMLCoder": [
       "~> 0.13.1"
     ]
-  }
+  },
+  "swift_version": "4.0"
 }
