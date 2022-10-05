@@ -82,7 +82,7 @@ class KhmerNextWordPredictor: NextWordPredictable {
     }
     
     private func getNextChar(input: String, nChars: Int = 3) throws -> [String] {
-        var inputText = String(input.suffix(SEQUENCE_LENGTH))
+        var inputText = String(input.unicodeScalars.suffix(SEQUENCE_LENGTH))
         inputText = inputText.unicodeScalars.padLeft(repeating: PADDING_CHAR, inLength: SEQUENCE_LENGTH)
         let inputVector: [Float32] = convertInput(inputText)
               
